@@ -8,7 +8,8 @@
     "webpack": "webpack",
     "debug": "node --inspect --debug-brk ./node_modules/webpack/bin/webpack.js",
     "prod": "npm run webpack -- --env.mode production",
-    "dev": "npm run webpack-dev-server -- --env.mode development --watch",
+    "dev": "npm run webpack-dev-server -- --env.mode development --watch --hot",
+    "prod:analyze": "npm run dev -- --env.presets analyze",
     "prod:debug": "npm run debug -- --env.mode production",
     "dev:debug": "npm run debug -- --env.mode development"
   },
@@ -36,7 +37,7 @@
     "ts-loader": "^4.2.0",
     "url-loader": "^1.0.1",
     "webpack": "^4.8.0",
-    "webpack-bundle-analyzer": "^2.11.1",
+    "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^2.1.3",
     "webpack-dev-server": "^3.1.5",
     "webpack-node-externals": "^1.7.2",

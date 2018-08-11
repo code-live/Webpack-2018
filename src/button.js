@@ -6,7 +6,11 @@
  * @returns {Element}
  */
 const makeBtn = (btnName) => {
-  return `Button ${btnName}`;
+  const btnLabel =  `Button ${btnName}`;
+   const btn = document.createElement("button");
+   btn.innerText = btnLabel;
+
+   return btn;
 }
 
 module.exports = makeBtn;

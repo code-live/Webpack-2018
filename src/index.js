@@ -1,11 +1,15 @@
 import nav from "./nav";
 import {
-  top,
-  bottom
+  footer
 } from "./footer";
 import makeBtn from "./button";
 import {
-  btnStyle
+  makeStyleColor
 } from "./button-style";
 
-console.log(nav(), top, bottom, makeBtn('myBtn'), btnStyle('yellow'));
+const btn = makeBtn('my btn');
+btn.style = makeStyleColor('red');
+document.body.appendChild(btn);
+document.body.appendChild(footer);
+
+console.log(nav(), makeBtn('myBtn'), makeStyleColor('black'));
